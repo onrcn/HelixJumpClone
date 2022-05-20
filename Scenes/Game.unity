@@ -238,7 +238,10 @@ MonoBehaviour:
   bottomTransform: {fileID: 8590690341243884308}
   helixLevelPrefab: {fileID: 6714669123393629013, guid: 92ee3741f6a177d4f8638e4c0952ec85,
     type: 3}
-  allStages: []
+  allStages:
+  - {fileID: 11400000, guid: 051d9bbef9606b3418d69bc52c152137, type: 2}
+  - {fileID: 11400000, guid: bdaf4ed2a4d3cfd47a242177c57af956, type: 2}
+  - {fileID: 11400000, guid: a0d94596c4a38b14b856cf95a40cddfe, type: 2}
 --- !u!1 &687904235
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +401,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 27.276, y: -46.876, z: -32.62}
+--- !u!1 &930488441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5891743100729147649, guid: adbeddc1026c5d440b1c5f5b021a3390,
+    type: 3}
+  m_PrefabInstance: {fileID: 931373072244030326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &930488442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930488441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e2ff8259298cc409e0bcfc8a7baec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &930488443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930488441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.4537096, y: 0.9726372, z: 4.782693}
+  m_Center: {x: -0.54499674, y: -0.013681412, z: -0.4065621}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +624,7 @@ GameObject:
   - component: {fileID: 1168160194}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -609,7 +643,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 2
   m_CollisionDetection: 0
 --- !u!135 &1168160190
 SphereCollider:
@@ -1039,6 +1073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922938758572058722, guid: adbeddc1026c5d440b1c5f5b021a3390,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8922938758572058722, guid: adbeddc1026c5d440b1c5f5b021a3390,
         type: 3}

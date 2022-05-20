@@ -31,7 +31,9 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-
+        currentLevel++;
+        FindObjectOfType<BallController>().ResetBallPosition();
+        FindObjectOfType<HelixController>().LoadStage(currentLevel);
     }
 
     public void GameOver()
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", singleton.highScore);
         }
         FindObjectOfType<BallController>().ResetBallPosition();
+        FindObjectOfType<HelixController>().LoadStage(currentLevel);
 
     }
 
